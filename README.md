@@ -38,15 +38,21 @@ conda install -y tensorboardX graphviz
 
 2. Search on Fashion-MNIST
 
-    Add `--use_history` if you want to use criterion 2. 
+    To search on Fashion-MNIST, use the command below. Add `--use_history` if you want to use criterion 2, which is described in the project report. 
 
     ```shell
     python train_search.py --dataset=fashionMNIST --use_history
     ```
 
+    The derived cell architectures can be found at the end of `genotypes.py`. They can be visualized using 
+
+    ```shell
+    python vis_cell.py <arch_name>
+    ```
+
 3. Train on FashionMNIST
 
-    The `<arch_name>` can be found at the end of `genotypes.py`, such as `Cri2_FMNIST_Best`. 
+    After searching, the network can be trained using
 
     ```shell
     python train.py --dataset=fashionMNIST --auxiliary --cutout --arch <arch_name>
@@ -54,7 +60,7 @@ conda install -y tensorboardX graphviz
 
 4. Test on pretrained models
 
-    The pretrained models is in the `./pretrained_model` directory. 
+    The pretrained models is in the `./pretrained_model` directory. To test pretrained models, use the command
 
     ```shell
     python test.py --dataset=fashionMNIST --auxiliary --arch <arch_name> --model_path=../pretrained_models/<model_name>
