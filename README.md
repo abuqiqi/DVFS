@@ -11,7 +11,7 @@ This project summarizes the work of [SGAS: Sequential Greedy Architecture Search
 
 ## Requirements
 
-This project was done on a Windows 11 system, using an NVIDIA GeForce GTX 1660 Ti GPU. The necessary dependencies are specified here.
+This project was done on a Windows 11 system, using an NVIDIA GeForce GTX 1660 Ti GPU. Necessary dependencies are specified here.
 
 ```shell
 # Create a virtual environment
