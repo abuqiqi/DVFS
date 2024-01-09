@@ -47,7 +47,7 @@ conda install -y tensorboardX graphviz
     The derived cell architectures can be found at the end of `genotypes.py`. They can be visualized using 
 
     ```shell
-    python vis_cell.py <arch_name>
+    python vis_cell.py FashionMNIST
     ```
 
 3. Train on FashionMNIST
@@ -55,7 +55,7 @@ conda install -y tensorboardX graphviz
     After searching, the network can be trained using
 
     ```shell
-    python train.py --dataset=fashionMNIST --auxiliary --cutout --arch <arch_name>
+    python train.py --dataset=fashionMNIST --auxiliary --cutout --arch FashionMNIST
     ```
 
 4. Test on pretrained models
@@ -63,5 +63,5 @@ conda install -y tensorboardX graphviz
     The pretrained models is in the `./pretrained_model` directory. To test pretrained models, use the command
 
     ```shell
-    python test.py --dataset=fashionMNIST --auxiliary --arch <arch_name> --model_path=../pretrained_models/<model_name>
+    python test.py --dataset=fashionMNIST --auxiliary --arch FashionMNIST --model_path=../pretrained_model/FashionMNIST.pt
     ```
