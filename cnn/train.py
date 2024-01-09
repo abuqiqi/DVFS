@@ -16,8 +16,6 @@ import uuid
 from torch.autograd import Variable
 from model import NetworkCIFAR as Network
 
-os.environ["cuda_visible_devices"] = '1'
-
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', type=str, default='fashionMNIST', choices=['fashionMNIST'])
 parser.add_argument('--data', type=str, default='../data', help='location of the data corpus')
