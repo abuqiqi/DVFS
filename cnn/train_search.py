@@ -13,6 +13,7 @@ import torch.utils
 import torch.nn.functional as F
 import torchvision.datasets as dset
 import torch.backends.cudnn as cudnn
+import uuid
 import torch.distributions.categorical as cate
 import torchvision.utils as vutils
 
@@ -52,7 +53,7 @@ parser.add_argument('--history_size', type=int, default=4, help='number of store
 parser.add_argument('--post_val', action='store_true', default=False, help='validate after each decision')
 args = parser.parse_args()
 
-args.save = 'search-{}-{}'.format(args.save, time.strftime("%Y%m%d-%H%M%S"))
+args.save = 'log/search-{}-{}-{}'.format(args.save, time.strftime("%Y%m%d-%H%M%S"), str(uuid.uuid4()))
 utils.create_exp_dir(args.save, scripts_to_save=glob.glob('*.py'))
 
 log_format = '%(asctime)s %(message)s'
